@@ -1,0 +1,16 @@
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <h2 class="active"> Sign In </h2>
+
+    <form class="login-form"  #myForm="ngForm" (ngSubmit)="submitLogin()">
+      <input type="text" [(ngModel)]="model.Email" id="login" class="fadeIn second" name="login" placeholder="Login">
+      <input type="password" [(ngModel)]="model.Password" id="password" class="fadeIn third" name="password" placeholder="Password">
+      <input type="submit" class="fadeIn fourth" value="Log In">
+    </form>
+
+    <div id="formFooter">
+      <a class="underlineHover" href="#">Forgot Password?</a>
+    </div>
+
+  </div>
+</div>

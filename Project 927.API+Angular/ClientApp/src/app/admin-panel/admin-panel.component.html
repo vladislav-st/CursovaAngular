@@ -1,0 +1,31 @@
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <h2 class="active"> Add product </h2>
+    <form #EventForm="ngForm" (ngSubmit)="onSubmit(EventForm)" class="login-form">
+        <input type="text" placeholder="Name product" name="name" />
+        <input type="text" placeholder="Description"  name="Description" />
+        <input type="text" placeholder="Image link"  name="image" />
+        <input type="number" placeholder="Price"  name="price" />
+        <input type="submit" class="fadeIn fourth" value="Add">
+    </form>
+  </div>
+</div>
+
+<table class="table" >  
+  <tr ngclass="btn-primary">  
+    <th class="th1">FullName</th>  
+    <th class="th2">Description</th>  
+    <th class="th3">Image</th>  
+    <th class="th4">Price</th>
+    <th class="th5">Edit</th>
+    <th class="th6">Delete</th>
+  </tr>  
+  <tr *ngFor="let product of this.allProducts">  
+    <td class="th1">{{[product].FullName}}</td>  
+    <td class="th2">{{[product].Description}}</td>  
+    <td class="th3">{{[product].Image}}</td>  
+    <td class="th4">{{[product].Price}</td>
+    <td class="th5"><button class="btn btn-info">Edit</button></td>  
+    <td class="th5"><button class="btn btn-info">Delete</button></td>  
+  </tr> 
+</table>
